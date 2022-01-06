@@ -10,7 +10,7 @@ class GetTrendingMoviesController {
 			return response.status(200).json(trendingMovies);
 		} catch(error) {
 			const {data, status} = error.response;
-			return response.status(status).json(data) ; 
+			return response.status(status).json(data); 
 		}
 	}
 }
