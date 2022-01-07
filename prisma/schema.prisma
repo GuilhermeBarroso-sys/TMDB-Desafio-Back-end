@@ -9,3 +9,16 @@ datasource db {
   provider = "mysql"
   url      = env("DATABASE_URL")
 }
+model Comment {
+  id       String @id @default(uuid())
+  name     String @db.VarChar(100)
+  text     String @db.LongText
+  @@map("comments")
+}
+
+model SavedMovie {
+  id       String @id @default(uuid())
+  movie_id Int    @db.Int
+
+  @@map("savedMovies")
+}

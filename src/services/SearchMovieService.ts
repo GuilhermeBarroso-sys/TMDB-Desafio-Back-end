@@ -1,11 +1,11 @@
 import axios from 'axios';
-import { GetPoster } from '../helpers/GetPoster';
 type TSearchMovie =  {
 	results: [{
 		id: string;
 		title: string,
 		release_date: string,
-		poster_path: string;
+		poster_path: string,
+		adult: boolean
 	}]
 }
 type TSearchMovieData = {
@@ -29,7 +29,6 @@ class SearchMovieService {
 		results.forEach((data) => {
 			movies.push({
 				data,
-				poster: GetPoster.handle(data.id)
 			});
 		});
 		return data;
