@@ -6,7 +6,6 @@ interface IPayload {
 
 export function EnsureAuthenticated(request: Request, response: Response, next: NextFunction) {
 	const authToken = request.headers.authorization;
-
 	if(!authToken) {
 		return response.status(401).json({
 			error: 'invalid token!'
