@@ -9,7 +9,6 @@ type TGetMovie =  {
 	release_date: string;
 	poster_path: string;
 	vote_average: number;
-	adult: boolean;
 }
 class ListSavedMoviesService {
 	async execute({user_id,language}:IListSavedMoviesService) {

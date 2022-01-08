@@ -4,8 +4,8 @@ import { RegisterUserService } from "../services/RegisterUserService";
 class RegisterUserController {
 	async handle(request: Request, response: Response) {
 		const {name,email,password} = request.body;
+		const registerUserService = new RegisterUserService();
 		try {
-			const registerUserService = new RegisterUserService();
 			const user = await registerUserService.execute({name,email,password});
 			return response.status(200).json(user);
 		} catch(error) {

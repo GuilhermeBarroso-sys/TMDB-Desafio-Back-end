@@ -2,9 +2,14 @@ import axios from 'axios';
 type TGetMovie =  {
 	title: string;
 	release_date: string;
+	overview: string;
+	runtime: number;
+	genres: [{
+		id: string;
+		name: string;
+	}]
 	poster_path: string;
 	vote_average: number;
-	adult: boolean;
 }
 interface IGetMovie {
 	id: string;
@@ -13,7 +18,6 @@ interface IGetMovie {
 class GetMovieService {
 	async execute({id,language} : IGetMovie) {
 		const {data} = await axios.get<TGetMovie>(`${process.env.TMDB_API}/movie/${id}?api_key=${process.env.TMDB_API_KEY}&language=${language}`);
-		console.log(data);
 		return data; 
 	}
 }

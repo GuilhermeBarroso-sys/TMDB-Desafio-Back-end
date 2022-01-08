@@ -3,7 +3,6 @@ type TGetPopularMovies = {
 	title: string;
 	release_date: string;
 	poster_path: string;
-	adult: boolean;
 }
 class GetPopularMoviesService {
 	async execute(language: string) {

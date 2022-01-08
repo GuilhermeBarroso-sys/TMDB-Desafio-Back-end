@@ -5,8 +5,8 @@ class GetMovieController {
 	async handle(request : Request, response: Response) {
 		const language = request.query.language as string;
 		const {id} = request.params;
+		const getMovieService = new GetMovieService();
 		try {
-			const getMovieService = new GetMovieService();
 			const movie = await getMovieService.execute({id,language});
 			return response.status(200).json(movie);
 		} catch(error) {

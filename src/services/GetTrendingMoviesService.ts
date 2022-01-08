@@ -3,7 +3,6 @@ type TGetMovieTrending =  {
 	title: string;
 	release_date: string;
 	poster_path: string;
-	adult: boolean;
 }
 interface IGetMovieTrending {
 	time_window: string;

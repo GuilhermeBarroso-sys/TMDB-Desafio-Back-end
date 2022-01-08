@@ -1,5 +1,4 @@
 import { DB } from "../database/prisma";
-
 interface ICreateMessageService {
 	user_id: string;
 	movie_id: number;
