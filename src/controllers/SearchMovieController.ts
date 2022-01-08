@@ -3,9 +3,10 @@ import { SearchMovieService } from "../services/SearchMovieService";
 class SearchMovieController {
 	async handle(request : Request, response : Response) {
 		const query = request.query.query as string;
+		const language = request.query.language as string;
 		try {
 			const searchMovieService = new SearchMovieService();
-			const result = await searchMovieService.execute(query);
+			const result = await searchMovieService.execute({query, language});
 			return response.status(200).json(result);
 		}catch(error) {
 			const {data, status} = error.response;

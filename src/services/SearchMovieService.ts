@@ -19,11 +19,13 @@ interface ISearchMovieResponse {
 	poster?: string
 	
 }
-  
+interface ISearchMovieService {
+	query:string;
+	language: string;
+}
 class SearchMovieService {
-	async execute(query: string) {
-		const search = query.split(' ').join('+');
-		const {data} = await axios.get<TSearchMovie>(`${process.env.TMDB_API}/search/movie?api_key=${process.env.TMDB_API_KEY}&query=${search}`);
+	async execute({query,language} : ISearchMovieService) {
+		const {data} = await axios.get<TSearchMovie>(`${process.env.TMDB_API}/search/movie?api_key=${process.env.TMDB_API_KEY}&query=${query}&language=${language}`);
 		const {results} = data;
 		const movies : ISearchMovieResponse[] = [];
 		results.forEach((data) => {
