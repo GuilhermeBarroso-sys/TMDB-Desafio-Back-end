@@ -8,6 +8,7 @@
   "scripts": {
     "dev": "ts-node-dev --transpile-only --exit-child --ignore-watch node_modules src/index.ts",
     "build": "tsc",
+    "production": "tsc && node build/index.js",
     "lint": "eslint . --ext .ts"
   },
   "devDependencies": {
