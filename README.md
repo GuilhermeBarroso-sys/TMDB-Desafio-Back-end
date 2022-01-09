@@ -45,7 +45,7 @@ Renomeie o arquivo .env.example para .env e logo em seguida, coloque as informa�
     localhost -> Endereço do banco
     movies    -> Nome do Schema
     
-### 2 - Baixar dependências e executar o projeto
+### 2 - Baixar dependências
 Nesse Projeto eu utilizei o yarn, então:
 ```ts
   yarn // Baixar dependências  
