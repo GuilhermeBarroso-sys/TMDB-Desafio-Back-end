@@ -28,11 +28,12 @@ Para executar o projeto, primeiro é preciso configurar o .env
 
 Renomeie o arquivo .env.example para .env e logo em seguida, coloque as informações necessarias que são:
     
-    1- TMDB_API_KEY= -> Chave da api do TMDB
-    2- TMDB_API -> Link da api do TMDB ("https://api.themoviedb.org/3")
-    3- JWT_SECRET -> Pode ser qualquer palavra como por exemplo "supersecret", é apenas para servir de referência pro JWT
-    4- PORT -> Porta em que o projeto está rodando ( ex: 3000, 3001...)
-    5- DATABASE_URL -> É o endereço da conexão do Banco de dados
+    1- TMDB_API_KEY=  -> Chave da api do TMDB
+    2- TMDB_API       -> Link da api do TMDB ("https://api.themoviedb.org/3")
+    3- JWT_SECRET     -> Pode ser qualquer palavra como por exemplo "supersecret", é apenas para servir de referência pro JWT
+    4- PORT           -> Porta em que o projeto está rodando ( ex: 3000, 3001...)
+    5- DATABASE_URL   -> É o endereço da conexão do Banco de dados
+    6- ENVIRONMENT    -> Indica se o ambiente é de desenvolvimento ou produção
 
     
 <h5> 
