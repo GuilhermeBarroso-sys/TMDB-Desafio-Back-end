@@ -49,7 +49,9 @@ Renomeie o arquivo .env.example para .env e logo em seguida, coloque as informa�
 ### 2 - Baixar dependências
 Nesse Projeto eu utilizei o yarn, então:
 ```ts
-  yarn // Baixar dependências  
+yarn // Baixar dependências  
+// Caso não funcione, tente:
+yarn bcrypt
 ```
 
 ### 3 - Configurar banco de dados e migrations
@@ -70,7 +72,7 @@ yarn prisma migrate dev
 ### 4 - Executar o projeto
 Por fim, basta executar o servidor!
 ```ts
-  yarn dev
+yarn dev
 ```
 Pronto, o projeto está rodando! Agora é só iniciar o client-side que se encontra aqui: https://github.com/GuilhermeBarroso-sys/TMDB-Desafio-Front-end <br>
  
