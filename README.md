@@ -37,7 +37,15 @@ Renomeie o arquivo .env.example para .env e logo em seguida, coloque as informa�
 
     
 <h5> 
-  obs: O DATABASE_URL tem o seguinte formato: "mysql://root:mypassword@localhost:3306/movies" Onde:
+  obs: 
+  
+  
+  - A variavel de ambiente TMDB_API já está configurada para facilitar o teste
+  
+  
+  - O DATABASE_URL tem o seguinte formato: "mysql://root:mypassword@localhost:3306/movies" Onde:
+
+
 </h5>
 
     mysql     -> Tipo do banco de dados utilizado
